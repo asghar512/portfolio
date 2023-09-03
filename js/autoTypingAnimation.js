@@ -1,0 +1,9 @@
+setTimeout(function() {
+    $('.about-info-inner').typed({
+      strings: [
+        "<span>Hi, I am Muhammad Asghar,</span> Over the past year, I have embarked on an exciting journey as a MERN (MongoDB, Express.js, React.js, Node.js) developer, and it has been nothing short of rewarding. My experience in crafting web applications using this powerful stack has been instrumental in shaping my skills both in front-end and back-end development.What sets me apart is not just my technical proficiency but also my ability to collaborate effectively with diverse teams. I understand that the best web applications are born from seamless teamwork, and I am dedicated to bringing this collaborative spirit to every project I undertake.I take pride in delivering high-quality web applications that not only meet but exceed our clients expectations My passion for coding is matched only by my commitment to continuous learning. I'm constantly exploring the latest advancements in the MERN stack, always hungry to expand my knowledge and enhance my development capabilities.In this fast-paced digital landscape, I believe adaptability is key. I'm ready to embrace new challenges and technologies, ensuring that I'm always at the forefront of innovation to provide our clients with cutting-edge solutions.With every line of code I write, I strive to create web applications that not only function flawlessly but also captivate users with exceptional user experiences. Your project's success is my top priority, and I look forward to the opportunity to bring your vision to life. Let's build something extraordinary together!"
+      ],
+      typeSpeed: 20,
+      contentType: 'html'
+    });
+  }, 100);
