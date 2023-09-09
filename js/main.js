@@ -76,9 +76,115 @@
             }
         });
     });
+//mongodb+srv://asghar:asghar@cluster0.qjx6gve.mongodb.net/
+    // document.querySelector('.contact-form form').addEventListener('submit', async (e) => {
+    //     e.preventDefault();
+    //     console.log(e)
+    //     const formData = {
+    //         name: e.target.name.value,
+    //         email: e.target.email.value,
+    //         subject: e.target.subject.value,
+    //         user_dtls: e.target.user_dtls.value
+    //     };
+    //     console.log(formData)
+    //     try {
+    //         const response = await fetch('http://localhost:3017/api/sendmessage', {
+    //             method: 'POST',
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             },
+    //             body: JSON.stringify(formData)
+    //         });
     
+    //         const result = await response.json();
+    //         console.log(result)
+    //         if (response.ok) {
+    //             alert('Message sent successfully!');
+    //         } else {
+    //             alert('Error sending message: ' + result.error);
+    //         }
+    //     } catch (error) {
+    //         alert('An error occurred: ' + error.message);
+    //     }
+    // });
     
+
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     document.querySelector('.contact-form form').addEventListener('submit', async function(e) {
+    //         e.preventDefault();
+    //         console.log('Form submitted');
+    //         const formData = {
+    //                     name: e.target.name.value,
+    //                     email: e.target.email.value,
+    //                     subject: e.target.subject.value,
+    //                     user_dtls: e.target.user_dtls.value
+    //                 };
+    //         console.log(formData)
+    //         try {
+    //                     const response = await fetch('https://portfolio.cyclic.cloud/api/sendmessage', {
+    //                         method: 'POST',
+    //                         headers: {
+    //                             'Content-Type': 'application/json'
+    //                         },
+    //                         body: JSON.stringify(formData)
+    //                     });
+                
+    //                     const result = await response.json();
+    //                     console.log(result)
+    //                     if (result.status === 1) {
+    //                         alert('Message sent successfully!');
+    //                     } else {
+    //                         alert('Error sending message: ' + result.error);
+    //                     }
+    //                 } catch (error) {
+    //                     alert('An error occurred: ' + error.message);
+    //                 }
+    //     });
+    // });
     
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const formElement = document.querySelector('.contact-form form');
+    
+        formElement.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            console.log('Form submitted');
+            const formData = {
+                name: e.target.name.value,
+                email: e.target.email.value,
+                subject: e.target.subject.value,
+                user_dtls: e.target.user_dtls.value
+            };
+            console.log(formData);
+    
+            try {
+                const response = await fetch('https://portfolio.cyclic.cloud/api/sendmessage', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                console.log(result);
+    
+                if (result.status === 1) {
+                    alert('Message sent successfully!');
+    
+                    // Clear the form fields
+                    formElement.reset();
+    
+                } else {
+                    alert('Error sending message: ' + result.error);
+                }
+            } catch (error) {
+                alert('An error occurred: ' + error.message);
+            }
+        });
+    });
+        
     
 
     /*----------- attach an event handler to document  ---------- */
